@@ -1,5 +1,5 @@
-import { useState } from "react";
 
+import {Link} from 'react-router-dom';
 const PostList = ({posts,changeTitle,deleteAction}) => {
     return (
         <div>
@@ -20,7 +20,12 @@ const PostList = ({posts,changeTitle,deleteAction}) => {
                             <th scope="row">{post.id}</th>
                             <td onClick={()=>changeTitle(post.id)}>{post.title}</td>
                             <td>{post.body}</td>
-                            <td><button type="button" onClick={()=>{deleteAction(post.id)}} className="btn btn-danger">Danger</button></td>
+                            <td>
+                                <button type="button" onClick={()=>{deleteAction(post.id)}} className="btn btn-danger">Danger</button>
+                            </td>
+                            <td>
+                                <Link to={`/posts/${ post.id}`}  className="btn btn-info">More</Link>
+                            </td>
                         </tr>
                 )})}
                 </tbody>

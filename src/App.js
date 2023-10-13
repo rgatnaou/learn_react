@@ -1,18 +1,27 @@
 
-
 import './App.css';
-import Navbar from './navbar.js';
+import {BrowserRouter , Route, Routes} from 'react-router-dom';
 import Home from './home';
+import Post from './Post';
 import About from './About';
-import Post  from './Post';
+import PostInfo from './PostInfo';
+
+import Navbar from './navbar.js';
+import Creat from './Creat';
 
 function App() {
   return (
     <div className="App">
+      <BrowserRouter>
         <Navbar />
-        {/* <Home/> */}
-        <Post/>
-        <About/>
+        <Routes>
+                <Route path='/home' element={<Home/>}/>
+                <Route path='/creat' element={<Creat/>}/>
+                <Route path='/posts' element={<Post/>}/>
+                <Route path='/about' element={<About/>}/>
+                <Route path='/posts/:id' element={<PostInfo/>}/>
+            </Routes>
+        </BrowserRouter>
     </div>
   ); 
 }
