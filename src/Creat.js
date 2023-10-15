@@ -43,23 +43,23 @@ const  Creat = () => {
       });
     }, 2000);
 
-  };
+  }
   return (
     <div className="container" style={{ marginTop: "5%" }}>
       <h1 style={{marginTop: "5%"}}>Creat</h1>
       <form className="row g-3" onSubmit={handleSubmit}>
         <div className="form-floating mb-3" style={{marginTop: "10%"}}>
           <input type="text" className="form-control" id="userId" required value={userId} onChange={(e)=>handleUserIdChange(e)} />
-          <label for="userId">User Id</label>
+          <label htmlFor="userId">User Id</label>
         </div>
         <div className="form-floating">
           <input type="text" className="form-control" id="title" required value={title} onChange={(e)=>handleTitle(e)}/>
-          <label for="title">title</label>
+          <label htmlFor="title">title</label>
         </div>
         <div className="form-floating">
           <textarea className="form-control" placeholder="Leave a comment here" id="body" style={{height: "100px"}}
           required value={body} onChange={(e)=>handleBody(e)}></textarea>
-          <label for="body">body</label>
+          <label htmlFor="body">body</label>
         </div>
         <div className="col-12" style={{marginTop: "5%"}}>
           {!wait && <button className="btn btn-primary" type="submit">Submit form</button>}

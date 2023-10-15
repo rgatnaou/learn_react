@@ -9,6 +9,7 @@ import PostInfo from './PostInfo';
 import Navbar from './navbar.js';
 import Creat from './Creat';
 import Edit from './Edit';
+import Search from './Search';
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
                 <Route path='/about' element={<About/>}/>
                 <Route path='/posts/:id' element={<PostInfo/>}/>
                 <Route path='/edit/:id' element={<Edit/>}/>
+                <Route path='/search' element={<Search/>}/>
+                <Route path='/' element={<Home/>}/>
+                <Route path='*' element={<h1>404 not found</h1>}/>
             </Routes>
         </BrowserRouter>
     </div>

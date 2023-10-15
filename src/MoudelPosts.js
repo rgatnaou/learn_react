@@ -8,6 +8,9 @@ function MoudelPosts(url) {
     
       const deleteAction = (id) =>
       {
+          fetch("https://jsonplaceholder.typicode.com/posts/" + id ,{
+            method: 'DELETE',
+          })
           const newPosts = posts.filter((post)=>post.id !== id);
           setPosts(newPosts);
       }

@@ -8,7 +8,7 @@ const Creat = () => {
 
   const { id } = useParams();
 
-  useEffect(() => {
+  useEffect((id) => {
     setTimeout(() => {
       fetch("https://jsonplaceholder.typicode.com/posts/" + id)
         .then((response) => response.json())
@@ -59,7 +59,7 @@ const Creat = () => {
             value={userId}
             onChange={(e) => setuserId(e.target.value)}
           />
-          <label for="userId">User Id</label>
+          <label htmlFor="userId">User Id</label>
         </div>
         <div className="form-floating">
           <input
@@ -70,7 +70,7 @@ const Creat = () => {
             value={title}
             onChange={(e) => settitle(e.target.value)}
           />
-          <label for="title">title</label>
+          <label htmlFor="title">title</label>
         </div>
         <div className="form-floating">
           <textarea
@@ -82,7 +82,7 @@ const Creat = () => {
             value={body}
             onChange={(e) => setbody(e.target.value)}
           ></textarea>
-          <label for="body">body</label>
+          <label htmlFor="body">body</label>
         </div>
         { !wait &&<div className="col-12" style={{ marginTop: "5%" }}>
           <button className="btn btn-primary" type="submit" >
