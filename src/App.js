@@ -8,6 +8,7 @@ import PostInfo from './PostInfo';
 
 import Navbar from './navbar.js';
 import Creat from './Creat';
+import Edit from './Edit';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
                 <Route path='/posts' element={<Post/>}/>
                 <Route path='/about' element={<About/>}/>
                 <Route path='/posts/:id' element={<PostInfo/>}/>
+                <Route path='/edit/:id' element={<Edit/>}/>
             </Routes>
         </BrowserRouter>
     </div>

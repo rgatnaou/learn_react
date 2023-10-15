@@ -26,6 +26,9 @@ const PostList = ({posts,changeTitle,deleteAction}) => {
                             <td>
                                 <Link to={`/posts/${ post.id}`}  className="btn btn-info">More</Link>
                             </td>
+                            <td>
+                                <Link to={`/edit/${ post.id}`}  className="btn btn-success">Edit</Link>
+                            </td>
                         </tr>
                 )})}
                 </tbody>
